@@ -24,6 +24,16 @@ public class ChuyenBayServiceIml implements ChuyenBayService {
 		// TODO Auto-generated method stub
 		return bayRepository.getDoDaiLonHon8000NhoHon10000();
 	}
+	@Override
+	public List<ChuyenBay> getDiSGNDenBMV() {
+		// TODO Auto-generated method stub
+		return bayRepository.getDiSGNDenBMV();
+	}
+	@Override
+	public List<ChuyenBay> getDiSGN() {
+		// TODO Auto-generated method stub
+		return bayRepository.getDiSGN();
+	}
 	
 
 }

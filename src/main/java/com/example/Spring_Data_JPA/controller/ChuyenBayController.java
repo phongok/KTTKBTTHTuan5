@@ -29,4 +29,14 @@ public class ChuyenBayController {
 		return chuyenBayService.getDoDaiLonHon8000NhoHon10000();
 	}
 	
+	@GetMapping("/getDiSGNDenBMV")
+	public List<ChuyenBay> getDiSGNDenBMV() {
+		return chuyenBayService.getDiSGNDenBMV();
+	}
+	
+	@GetMapping("/getDiSGN")
+	public List<ChuyenBay> getDiSGN(){
+		return chuyenBayService.getDiSGN();
+	}
+	
 }
