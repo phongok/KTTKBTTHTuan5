@@ -6,5 +6,7 @@ import com.example.Spring_Data_JPA.entity.ChuyenBay;
 
 
 public interface ChuyenBayService {
-		List<ChuyenBay> findCBDaLat(String gaDen);
+	public List<ChuyenBay> chuyenBayDenDaLat();
+	public List<ChuyenBay> getDoDaiLonHon8000NhoHon10000();
+	
 }
