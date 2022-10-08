@@ -23,4 +23,10 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 	
 	@Query(value = "select * from chuyenbay where ga_di='SGN'", nativeQuery = true)
 	public List<ChuyenBay> getDiSGN();
+	
+	@Query(value = "select * from chuyenbay where do_dai < (select tam_bay from maybay where loai LIKE 'Airbus A320%')", nativeQuery = true)
+	public List<ChuyenBay> getCBMBAirbusA320BayDuoc();
+	
+	@Query(value = "select count(ga_di) as tong_chuyen_bay from chuyenbay where ga_di = ?1 group by ga_di", nativeQuery = true)
+	public int getTongChuyenBayCuaGaDi(String gaDi);
 }

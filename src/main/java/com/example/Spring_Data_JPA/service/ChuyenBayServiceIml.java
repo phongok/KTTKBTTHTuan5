@@ -34,6 +34,16 @@ public class ChuyenBayServiceIml implements ChuyenBayService {
 		// TODO Auto-generated method stub
 		return bayRepository.getDiSGN();
 	}
+	@Override
+	public List<ChuyenBay> getCBMBAirbusA320BayDuoc() {
+		// TODO Auto-generated method stub
+		return bayRepository.getCBMBAirbusA320BayDuoc();
+	}
+	@Override
+	public int getTongChuyenBayCuaGaDi(String gaDi) {
+		// TODO Auto-generated method stub
+		return bayRepository.getTongChuyenBayCuaGaDi(gaDi);
+	}
 	
 
 }

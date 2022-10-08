@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,6 +38,16 @@ public class ChuyenBayController {
 	@GetMapping("/getDiSGN")
 	public List<ChuyenBay> getDiSGN(){
 		return chuyenBayService.getDiSGN();
+	}
+	
+	@GetMapping("/getCBMBAirbusA320BayDuoc")
+	public List<ChuyenBay> getCBMBAirbusA320BayDuoc(){
+		return chuyenBayService.getCBMBAirbusA320BayDuoc();
+	}
+	
+	@PostMapping("/getTongChuyenBayCuaGaDi/{gaDi}")
+	public int getTongChuyenBayCuaGaDi(@PathVariable String gaDi) {
+		return chuyenBayService.getTongChuyenBayCuaGaDi(gaDi);
 	}
 	
 }
