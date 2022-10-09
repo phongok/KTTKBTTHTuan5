@@ -1,5 +1,4 @@
 package com.example.Spring_Data_JPA.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -7,7 +6,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "maybay")
 public class MayBay {
-	
 	@Id
 	private int maMayBay;
 	private String loai;
@@ -31,7 +29,6 @@ public class MayBay {
 	public void setTamBay(int tamBay) {
 		this.tamBay = tamBay;
 	}
-	
 	public MayBay() {
 	}
 	public MayBay(int maMayBay, String loai, int tamBay) {

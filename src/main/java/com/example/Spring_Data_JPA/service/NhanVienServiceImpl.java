@@ -1,14 +1,10 @@
 package com.example.Spring_Data_JPA.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.Spring_Data_JPA.entity.NhanVien;
 import com.example.Spring_Data_JPA.repository.NhanVienRepository;
-
-
 
 @Service
 public class NhanVienServiceImpl implements NhanVienService{
@@ -28,28 +24,9 @@ public class NhanVienServiceImpl implements NhanVienService{
 
 	@Override
 	public List<String> getPhiCongBoeing() {
-		// TODO Auto-generated method stub
-		return null;
+		return nhanVienRepository.getPhiCongBoeing();
 	}
 
-	@Override
-	public List<String> getNhanVienLaiMB747() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public List<Integer> getMBNVHoNguyenLaiDuoc() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<String> getPhiCongLaiMBBoeing() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 
 }

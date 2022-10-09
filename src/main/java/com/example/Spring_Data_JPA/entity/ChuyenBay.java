@@ -1,39 +1,28 @@
 package com.example.Spring_Data_JPA.entity;
-
 import java.sql.Time;
 import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "chuyenbay")
 public class ChuyenBay {
-
 	@Id
 	@Column(name = "MaCB")
 	private String maChuyenBay;
-	
 	@Column(name = "GaDi")
 	private String gaDi;
-	
 	@Column(name = "GaDen")
 	private String gaDen;
-	
 	@Column(name = "DoDai")
 	private int doDai;
-	
 	@Column(name = "GioDi")
 	private Time gioDi;
-	
 	@Column(name = "GioDen")
 	private Time gioDen;
-	
 	@Column(name = "ChiPhi")
 	private int chiPhi;
-	
 	public String getMaChuyenBay() {
 		return maChuyenBay;
 	}
@@ -76,7 +65,6 @@ public class ChuyenBay {
 	public void setChiPhi(int chiPhi) {
 		this.chiPhi = chiPhi;
 	}
-	
 	public ChuyenBay() {
 	}
 	public ChuyenBay(String maChuyenBay, String gaDi, String gaDen, int doDai, Time gioDi, Time gioDen, int chiPhi) {
@@ -88,7 +76,6 @@ public class ChuyenBay {
 		this.gioDen = gioDen;
 		this.chiPhi = chiPhi;
 	}
-	
 	@Override
 	public String toString() {
 		return "ChuyenBay [maChuyenBay=" + maChuyenBay + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai

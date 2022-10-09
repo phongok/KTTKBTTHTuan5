@@ -1,9 +1,7 @@
 package com.example.Spring_Data_JPA.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "nhanvien")
 public class NhanVien {

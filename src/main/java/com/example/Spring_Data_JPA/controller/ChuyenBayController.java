@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.example.Spring_Data_JPA.entity.ChuyenBay;
 import com.example.Spring_Data_JPA.service.ChuyenBayService;
-
 
 @RestController
 @RequestMapping("/chuyenBay")
@@ -45,9 +45,5 @@ public class ChuyenBayController {
 		return chuyenBayService.getCBMBAirbusA320BayDuoc();
 	}
 	
-	@PostMapping("/getTongChuyenBayCuaGaDi/{gaDi}")
-	public int getTongChuyenBayCuaGaDi(@PathVariable String gaDi) {
-		return chuyenBayService.getTongChuyenBayCuaGaDi(gaDi);
-	}
-	
+
 }
