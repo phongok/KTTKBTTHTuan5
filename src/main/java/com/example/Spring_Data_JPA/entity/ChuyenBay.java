@@ -1,106 +1,86 @@
 package com.example.Spring_Data_JPA.entity;
 
+import java.sql.Time;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Table(name = "chuyenbay")
 public class ChuyenBay {
+
 	@Id
-	@GeneratedValue
-	private String maCB;
+	@Column(name = "MaCB")
+	private String maChuyenBay;
 	
-	@Column(name="GaDi")
+	@Column(name = "GaDi")
 	private String gaDi;
 	
-	@Column(name="GaDen")
+	@Column(name = "GaDen")
 	private String gaDen;
 	
-	@Column(name="DoDai")
+	@Column(name = "DoDai")
 	private int doDai;
 	
-	@Column(name="GioDi")
-	private LocalDate gioDi;
+	@Column(name = "GioDi")
+	private Time gioDi;
 	
-	@Column(name="GioDen")
-	private LocalDate gioDen;
+	@Column(name = "GioDen")
+	private Time gioDen;
 	
-	@Column(name="ChiPhi")
+	@Column(name = "ChiPhi")
 	private int chiPhi;
-
-	public String getMaCB() {
-		return maCB;
+	
+	public String getMaChuyenBay() {
+		return maChuyenBay;
 	}
-
-	public void setMaCB(String maCB) {
-		this.maCB = maCB;
+	public void setMaChuyenBay(String maChuyenBay) {
+		this.maChuyenBay = maChuyenBay;
 	}
-
 	public String getGaDi() {
 		return gaDi;
 	}
-
 	public void setGaDi(String gaDi) {
 		this.gaDi = gaDi;
 	}
-
 	public String getGaDen() {
 		return gaDen;
 	}
-
 	public void setGaDen(String gaDen) {
 		this.gaDen = gaDen;
 	}
-
 	public int getDoDai() {
 		return doDai;
 	}
-
 	public void setDoDai(int doDai) {
 		this.doDai = doDai;
 	}
-
-	public LocalDate getGioDi() {
+	public Time getGioDi() {
 		return gioDi;
 	}
-
-	public void setGioDi(LocalDate gioDi) {
+	public void setGioDi(Time gioDi) {
 		this.gioDi = gioDi;
 	}
-
-	public LocalDate getGioDen() {
+	public Time getGioDen() {
 		return gioDen;
 	}
-
-	public void setGioDen(LocalDate gioDen) {
+	public void setGioDen(Time gioDen) {
 		this.gioDen = gioDen;
 	}
-
 	public int getChiPhi() {
 		return chiPhi;
 	}
-
 	public void setChiPhi(int chiPhi) {
 		this.chiPhi = chiPhi;
 	}
-
-	public ChuyenBay(String maCB, String gaDi, String gaDen, int doDai, LocalDate gioDi, LocalDate gioDen, int chiPhi) {
-		super();
-		this.maCB = maCB;
+	
+	public ChuyenBay() {
+	}
+	public ChuyenBay(String maChuyenBay, String gaDi, String gaDen, int doDai, Time gioDi, Time gioDen, int chiPhi) {
+		this.maChuyenBay = maChuyenBay;
 		this.gaDi = gaDi;
 		this.gaDen = gaDen;
 		this.doDai = doDai;
@@ -108,17 +88,10 @@ public class ChuyenBay {
 		this.gioDen = gioDen;
 		this.chiPhi = chiPhi;
 	}
-
-	public ChuyenBay() {
-		super();
-	}
-
+	
 	@Override
 	public String toString() {
-		return "ChuyenBay [maCB=" + maCB + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai + ", gioDi="
-				+ gioDi + ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
+		return "ChuyenBay [maChuyenBay=" + maChuyenBay + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai
+				+ ", gioDi=" + gioDi + ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
 	}
-	
-	
-	
 }
